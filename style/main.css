@@ -1,0 +1,69 @@
+/*--------------------
+IMPORTS
+--------------------*/
+
+
+
+/*--------------------
+MEDIA QUERIES
+--------------------*/
+
+
+
+/*--------------------
+VARIABLES
+--------------------*/
+:root {
+  --brandGrey:rgb(68,68,68);
+  --brandWhite:rgb(208,208,208);
+}
+
+
+/*--------------------
+TAG SELECTORS
+--------------------*/
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin:0;
+  background-color:var(--brandGrey);
+}
+p, span, button, h1, h2, h3, h4, h5, h6 {
+  /* temporary */
+  font-family: monospace;
+  color:var(--brandWhite);
+}
+/*--------------------
+GENERAL CLASSES
+--------------------*/
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+/*--------------------
+STUPID STUFF
+--------------------*/
+.expand {
+  transition:5s ease-out;
+  transform:scale(1) rotate(0deg);
+}
+.expand:hover {
+  transition:20s ease-in;
+  transform:scale(15) rotate(360deg);
+}
