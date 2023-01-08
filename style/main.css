@@ -5,7 +5,7 @@ IMPORTS
 /*--------------------
 MEDIA QUERIES
 --------------------*/
-@media only screen and (max-width: 800px){
+@media only screen and (max-aspect-ratio:4/5){
   /*Mobile*/
   body .mobile-flex-column {
     display: flex;
@@ -41,7 +41,7 @@ MEDIA QUERIES
     float:right;
   }
 }
-@media only screen and (min-width: 800px){
+@media only screen and (min-aspect-ratio:4/5){
   /*Mobile*/
   body .desktop-hidden {
     display:none;
@@ -113,7 +113,7 @@ GENERAL CLASSES
 .Navigation {
   height:100%;
   width:50%;
-  max-width:800px;
+  max-width:650px;
 }
 .Navigation > * {
   display: flex;
