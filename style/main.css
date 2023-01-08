@@ -21,8 +21,8 @@ MEDIA QUERIES
     position:absolute;
     top:0;
     right:10px;
-    height:50px;
-    width:50px;
+    height:5vh;
+    width:5vh;
     transition:0.3s;
   }
   body .Navigation:hover {
@@ -30,13 +30,13 @@ MEDIA QUERIES
     width:200px;
   }
   body .Navigation .hamburger-menu-img, body .Navigation .hamburger-menu-icon-parent {
-    height:50px;
-    width:50px;
+    height:5vh;
+    width:5vh;
     float:right;
   }
   body .Navigation .Navigation-link {
     width:200px;
-    height:50px;
+    height:5vh;
     position:relative;
     float:right;
   }
@@ -81,7 +81,7 @@ body {
   background-image:url("../resources/img/abstract_bg_blobs-2.png");
   background-position:center;
   background-size:100%;
-  font-size: 2.5rem;
+  font-size: 2.6vh;
 }
 p, span, button, a, div {
   font-family: 'Roboto', sans-serif;
@@ -107,7 +107,7 @@ GENERAL CLASSES
   min-height:100vh;
 }
 .Topbar {
-  height:50px;
+  height:5vh;
   padding:0 10px;
 }
 .Navigation {
