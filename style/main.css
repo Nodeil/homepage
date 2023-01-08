@@ -1,38 +1,97 @@
 /*--------------------
 IMPORTS
 --------------------*/
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&family=Source+Code+Pro&display=swap');
 /*--------------------
 MEDIA QUERIES
 --------------------*/
-
+@media only screen and (max-width: 800px){
+  /*Mobile*/
+  body .mobile-flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  body .mobile-height-70vh {
+    height:70vh;
+  }
+  body .Navigation {
+    overflow:hidden;
+    display:block;
+    flex-grow:0;
+    position:absolute;
+    top:0;
+    right:10px;
+    height:50px;
+    width:50px;
+    transition:0.3s;
+  }
+  body .Navigation:hover {
+    height:100%;
+    width:200px;
+  }
+  body .Navigation .hamburger-menu-img, body .Navigation .hamburger-menu-icon-parent {
+    height:50px;
+    width:50px;
+    float:right;
+  }
+  body .Navigation .Navigation-link {
+    width:200px;
+    height:50px;
+    position:relative;
+    float:right;
+  }
+}
+@media only screen and (min-width: 800px){
+  /*Mobile*/
+  body .desktop-hidden {
+    display:none;
+  }
+}
 
 
 /*--------------------
 VARIABLES
 --------------------*/
 :root {
-  --brandGrey:rgb(68,68,68);
-  --brandWhite:rgb(208,208,208);
+  --color-bg:rgb(9,11,20);
+  --color-obj:rgba(255,255,255,0.2);
+  --color-obj-2:rgba(255,255,255,0.08);
+  --color-shadow:rgba(208,208,208,0.05);
+  --color-obj-accent:rgba(255, 136, 0, 0.3);
+  --color-obj-accent-2:rgba(0, 255, 242, 0.3);
+  --color-accent:rgb(255, 136, 0);
+  --color-accent-2:rgb(51, 211, 240);
+  --txt-body-color:rgb(255,255,255);
+  --txt-header-color:rgb(255,255,255);
 }
 
 
 /*--------------------
 TAG SELECTORS
 --------------------*/
+html {
+  font-size: 62.5%;
+}
 body {
   min-width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
   margin:0;
-  background-color:var(--brandGrey);
+  background-color:var(--color-bg);
+  background-image:url("../resources/img/abstract_bg_blobs-2.png");
+  background-position:center;
+  background-size:100%;
+  font-size: 2.5rem;
 }
-p, span, button, h1, h2, h3, h4, h5, h6 {
-  /* temporary */
-  font-family: monospace;
-  color:var(--brandWhite);
+p, span, button, a, div {
+  font-family: 'Roboto', sans-serif;
+  color:var(--txt-body-color);
+  margin:0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color:var(--txt-header-color);
+  margin:0;
 }
 /*--------------------
 GENERAL CLASSES
@@ -43,10 +102,36 @@ GENERAL CLASSES
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.Content {
+  min-width:100vw;
+  min-height:100vh;
+}
+.Topbar {
+  height:50px;
+  padding:0 10px;
+}
+.Navigation {
+  height:100%;
+  width:50%;
+  max-width:800px;
+}
+.Navigation > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow:1;
+}
+.fillScreen {
+  width:100%;
+  height:100%;
+}
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.flex-row-spaced {
+  justify-content:  space-between;
 }
 .flex-column {
   display: flex;
@@ -56,14 +141,52 @@ GENERAL CLASSES
   display: flex;
   flex-direction: row;
 }
-/*--------------------
-STUPID STUFF
---------------------*/
-.expand {
-  transition:5s ease-out;
-  transform:scale(1) rotate(0deg);
+.flex-grow {
+  flex-grow:1;
 }
-.expand:hover {
-  transition:20s ease-in;
-  transform:scale(15) rotate(360deg);
+.padding-10 {
+  padding:10px;
+}
+.padding-20 {
+  padding:20px;
+}
+.glassBoxGeneric {
+  padding:10px;
+  margin:10px;
+  background-color: var(--color-obj);
+  border:15px solid var(--color-obj-2);
+  box-shadow:0 0 20px var(--color-shadow),
+             0 0 10px var(--color-shadow);
+  border-radius:5px;
+  backdrop-filter:blur(10px);
+}
+.txt-code {
+  font-family: 'Source Code Pro', monospace;
+}
+.txt-color-accent {
+  color:var(--color-accent);
+}
+.txt-color-accent-2 {
+  color:var(--color-accent-2);
+}
+.txt-bold {
+  font-weight:bold;
+}
+/*--------------------
+SPECIFIC CLASSES
+--------------------*/
+.hamburger-menu-img {
+  filter:invert(1);
+}
+
+
+/*--------------------
+DEBUG CLASSES
+--------------------*/
+.temporary-homepage {
+  width:500px;
+  height:300px;
+  position:relative;
+  top:20%;
+  left:20%;
 }
