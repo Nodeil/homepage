@@ -15,6 +15,7 @@ This is a relatively new project, so no external libraries are used at the momen
 - HTML
 - CSS
 - JS
+- Lance magic
 
 ## Contribution Workflow
 
