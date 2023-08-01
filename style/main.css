@@ -53,6 +53,12 @@ MEDIA QUERIES
 VARIABLES
 --------------------*/
 :root {
+  --font-size-h:1.6rem;
+  --font-size-p:1rem;
+  --body-bg-plain:rgb(255, 251, 237);
+  --building:rgb(222, 210, 179);
+  --building-accent:rgb(17, 85, 204);
+  --building-shadow:rgb(163, 173, 129);
   --color-bg:rgb(9,11,20);
   --color-obj:rgba(255,255,255,0.2);
   --color-obj-2:rgba(255,255,255,0.08);
@@ -61,8 +67,21 @@ VARIABLES
   --color-obj-accent-2:rgba(0, 255, 242, 0.3);
   --color-accent:rgb(255, 136, 0);
   --color-accent-2:rgb(51, 211, 240);
+  --component-bg-plain:rgb(239, 239, 239);
+  --foliage:rgb(147, 196, 125);
+  --foliage-shadow:rgb(56, 118, 29);
+  --soil:rgb(255, 251, 237);
+  --stone:rgb(179, 194, 208);
   --txt-body-color:rgb(255,255,255);
   --txt-header-color:rgb(255,255,255);
+  --txt-h-plain:rgb(19, 79, 92);
+  --txt-p-plain:rgb(0, 0, 0);
+  --txt-p-light:rgb(153, 153, 153);
+  --txt-accent1:rgb(230, 145, 56);
+  --txt-accent2:rgb(60, 120 , 216);
+  --txt-accent3:rgb(118, 165, 175);
+  --water:rgb(61, 133, 198);
+  --water-deep:rgb(7, 55, 99);
 }
 
 
@@ -77,7 +96,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   margin:0;
-  background-color:var(--color-bg);
+  background-color:var(--body-bg-plain);
   background-image:url("../resources/img/abstract_bg_blobs-2.png");
   background-position:center;
   background-size:100%;
@@ -172,9 +191,29 @@ GENERAL CLASSES
 .txt-bold {
   font-weight:bold;
 }
+
 /*--------------------
 SPECIFIC CLASSES
 --------------------*/
+.arrow-top {
+  display: inline-block;
+  border: solid #FCA101;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+}
+
+.arrow-left{
+  position: fixed; 
+}
+
+.arrow-right{
+  position: fixed;
+}
+
+.arrow-bottom{
+  position: fixed;
+}
+
 .hamburger-menu-img {
   filter:invert(1);
 }
@@ -190,3 +229,4 @@ DEBUG CLASSES
   top:20%;
   left:20%;
 }
+
