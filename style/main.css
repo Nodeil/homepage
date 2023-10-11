@@ -201,6 +201,9 @@ SPECIFIC CLASSES
   border-width: 0 5px 5px 0;
   padding: 5px;
   rotate: 225deg;
+  position: absolute;
+  top: 5px; 
+  left: 50%; 
 }
 
 .arrow-left{
@@ -209,6 +212,9 @@ SPECIFIC CLASSES
   border-width: 0 5px 5px 0;
   padding: 5px;
   rotate: 135deg;
+  position: absolute;
+  top: 50%; 
+  left: 5px; 
 }
 
 .arrow-right{
@@ -217,6 +223,9 @@ SPECIFIC CLASSES
   border-width: 0 5px 5px 0;
   padding: 5px;
   rotate: 315deg;
+  position: absolute; 
+  top: 50%; 
+  right: 5px; 
 }
 
 .arrow-bottom{
@@ -225,6 +234,9 @@ SPECIFIC CLASSES
   border-width: 0 5px 5px 0;
   padding: 5px;
   rotate: 45deg;
+  position: absolute; 
+  bottom: 5px; 
+  left: 50%;
 }
 
 .hamburger-menu-img {
